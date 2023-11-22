@@ -16,3 +16,6 @@ $(TARGET): $(TARGET).cpp
 
 clean:
 						$(RM) $(TARGET)
+
+run:
+						./$(TARGET)
