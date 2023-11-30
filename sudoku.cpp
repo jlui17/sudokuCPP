@@ -5,5 +5,11 @@ int main() {
     Console console;
 
     console.printBoard(board);
+    int r = console.getRow();
+    int c = console.getCol();
+    int v = console.getVal();
+    board[r][c] = v;
+    console.printBoard(board);
+
     return 0;
 }
