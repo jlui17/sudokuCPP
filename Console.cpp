@@ -10,7 +10,15 @@ void Console::printBoard(std::vector<std::vector<int> > board) {
 
     for (int r = 1; r < 10; r++) {
         for (int c = 1; c < 10; c++) {
-            std::cout << board[r - 1][c - 1];
+            std::cout << " ";
+
+            if (board[r - 1][c - 1] == 0)
+                std::cout << " ";
+            else
+                std::cout << board[r - 1][c - 1];
+
+            std::cout << " ";
+
             if (c != 9)
                 if (c % 3 == 0)
                     std::cout << "||";
@@ -22,9 +30,9 @@ void Console::printBoard(std::vector<std::vector<int> > board) {
 
         if (r != 9) {
             if (r % 3 == 0)
-                std::cout << "= = =  = = =  = = =\n";
+                std::cout << "===========||===========||===========\n";
             else
-                std::cout << "- - -  - - -  - - -\n";
+                std::cout << "- - - - - -||- - - - - -||- - - - - -\n";
         }
     }
     std::cout << "\n\n";
